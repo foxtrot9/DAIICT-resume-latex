@@ -1,0 +1,158 @@
+\documentclass[a4paper,10pt]{article}
+
+% Few important packages
+\usepackage{fontspec}	% for loading Fontin fonts
+\usepackage{fontawesome}	% Symbols for Email, Github.
+\usepackage{hyperref}	% for hyperlinks
+\usepackage[usenames,dvipsnames]{xcolor}	% Color package
+\usepackage[big]{layaureo}	% wider formatting of the A4 page
+\usepackage{titlesec}	% custom \section
+\usepackage{fancyhdr}	% Headers and footers
+\usepackage[absolute]{textpos}	% Alignment of page
+\usepackage{graphicx}	% For image loading
+\usepackage{caption}	% Caption setup for image
+\usepackage{float}	% Minipage settings for side by side
+
+% Setup hyperref package, and colours for links
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+% Font settings
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]{Fontin.otf}
+
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{15pt}{3pt} % Spacing between Sections of two sections. Increase 2nd field to add more space between 2 sections.
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+\pagestyle{empty} % non-numbered pages 
+
+
+% BEGIN DOCUMENT
+\begin{document}
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+% TITLE: DAIICT LOGO
+\captionsetup[figure]{labelformat=empty}
+\begin{minipage}{0.2\textwidth}
+\begin{figure}[H]
+\includegraphics[scale=0.42]{daiict.jpg}
+\end{figure}
+\end{minipage} \hfill
+\begin{minipage}{0.71\textwidth}
+\begin{tabular}{ll}
+	\multicolumn{2}{l}{\Huge Mit J. Naria \vspace*{0.75\baselineskip}} \\
+	\textsc{DOB:} & 30, December 1996 \\
+	\textsc{Address:}	& D-115, HOR-Men, DA-IICT, Gandhinagar, India-382007. \\
+	\textsc{Phone:}		& +91 9924476971 \\
+	\textsc{Email:} & \href{mailto:201401448@daiict.ac.in}{201401448@daiict.ac.in} \\
+\end{tabular}
+\end{minipage}
+
+
+% Section: Education
+\section{Education}
+\begin{tabular}{r|p{11cm}}
+\textsc{Current} & \textbf{B.Tech in ICT with minor in Computational Science}\\
+	\textsc{2014-2018} &\footnotesize{Dhirubhai Ambani Institute of Information and Communication Technology \textbf{(DA-IICT)}, India.}\\
+	&\footnotesize{GPA: 7.97/10}\\ \multicolumn{2}{c}{} \\
+	
+\textsc{2012-2014} & \textbf{Higher Secondary Education}\\
+	&\footnotesize{Smt. V. D. Desai (Wadiwala) School, Surat, Gujarat, India.} \\
+	&\footnotesize{Board : GSHEB} \\
+	&\footnotesize{Percentage : 94 \%} \\ \multicolumn{2}{c}{} \\
+	
+\textsc{2009-2012} & \textbf{Secondary Education}\\
+	&\footnotesize{Smt. V. D. Desai (Wadiwala) School, Surat, Gujarat, India.} \\
+	&\footnotesize{Board : GSHEB}\\
+	&\footnotesize{Percentage : 93.6 \%}\\
+\end{tabular}
+
+
+% Section: Languages
+\section{Languages}
+\begin{tabular}{rl}
+	\textsc{Gujarati:}&Mothertongue\\
+	\textsc{English:}&Fluent\\
+	\textsc{Hindi:}&Basic Knowledge\\
+\end{tabular}
+
+
+% Section: Skills
+\section{Skills}
+\begin{tabular}{rl}
+ Basic Knowledge: & \textsc{C++}, \textsc{Python}, \textsc{R}, \textsc{PostgreSQL}, \textsc{Linux}, ubuntu, {\fb \LaTeX}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}\\
+Intermediate Knowledge: & \textsc{Java}, \textsc{C}, \textsc{MATLAB}, \textsc{Shell Scripting}\\
+Technologies: & \textsc{OpenMP}, \textsc{MPI} \\
+Tools: & \textsc{Visual Studio Code}, \textsc{Git}, \textsc{Clion}, \textsc{VIM}
+\end{tabular}
+
+
+% Section: Internships
+\section{Internships}
+\begin{tabular}{r|p{11cm}}
+\textsc{7, Dec. 2016 -} & \textbf{Rural Internship}\\
+	\textsc{27, Dec. 2016} & \small NGO: KVSVS, Surat, Gujarat, India.\\
+	& \small GUIDE: Manojbhai Patel \\
+	&\footnotesize{KVSVS is NGO based in rural areas in Surat. My team and I helped them to coordinate surveys and to maintain a database for the local people in order to have better analysis of problems faced by them.}\\\multicolumn{2}{c}{} \\
+\end{tabular}
+
+
+% Section: Projects
+\section{Projects}
+\begin{tabular}{r|p{11cm}}
+\textsc{Nov. 2016} & \textbf{Parallel Union Find algorithm} \href{https://github.com/foxtrot9/HiPC_Project}{\faCodeFork} \\
+	&\footnotesize{Implemented an Union Find algorithm using OpenMP API to harness power of parallel computing as part of Student Parallel Programming challenge held by \textbf{HiPC}, India. It is one of problems that are very difficult to parallelize.}\\\multicolumn{2}{c}{} \\
+	
+\textsc{Oct. 2016} & \textbf{Sample Sort} \href{https://github.com/foxtrot9/HPC_Project}{\faCodeFork} \\
+	&\footnotesize{Implemented a parallel sorting algorithm using MPI protocol which sorted 2 billion 64-bit integers in just 105 seconds on Intel Xeon E5-2650.}\\\multicolumn{2}{c}{} \\
+	
+\textsc{MAR. 2016} & \textbf{Dynamic Memory Allocator}\\
+	&\footnotesize{Implemented a custom memory allocator as part of System Software course at DAIICT.}\\\multicolumn{2}{c}{} \\
+	
+\textsc{Feb. 2016} & \textbf{Tiny Shell}\\
+	&\footnotesize{I built a tiny shell with features such as Job Control, Foreground-Background   Job.}
+\end{tabular}
+
+
+% Section: Position of responsibility
+\section{Position of responsibility}
+\begin{tabular}{r|p{11cm}}
+	\textsc{Jan. 2015 -} & Microsoft Students Technical Club\textbf{(MSTC)}, DAIICT\\
+	\textsc{Jan. 2016} &\footnotesize{Conducted a session on \textsc{"C Pointers"} for junior batches and managed various events of MSTC such as Hackathon, Microsoft Azure Workshop.}
+\end{tabular}
+
+
+% Section: Awards and Achievements
+\section{Awards and Achievements}
+\begin{tabular}{rl}
+	\textsc{Nov.} 2016 & \textbf{HiPC} Student Parallel Programming challenge phase 1 finalists.\\
+	\textsc{From July.} 2014 & Recipient of Merit-Cum-Means scholarship awarded by my college. \\
+	\textsc{From July.} 2014 & Rank-wise 6 in my college according to AIR. \\
+	\textsc{July.} 2014 & Selected for CM scholarship by Gujarat Government. \\
+	\textsc{June.} 2014 & AIR 2162 in \textbf{JEE} Mains. \\
+	2013 & Ranked 253 in \textbf{IMO-2013} level 1 and ranked 527 in \textbf{IMO-2013} level 2, \\
+	& conducted in 14 countries in Asia by \href{www.sofworld.org}{\textbf{SOF}}.\\
+	2012 & Ranked 201 in \textbf{NSO-2012} level 1 conducted in India by \href{www.sofworld.org}{\textbf{SOF}}. \\
+	\textsc{From.} 2007 & Won various GK IQ quizzes and exams at city level.
+\end{tabular}
+
+% Section: Interests and Activities
+\section{Interests and Activities}
+High Performance Computing, Distributed Computing \\
+Multicore and Multiprocessor systems\\
+Neural networks\\
+Economics, Computational Finance\\
+Volleyball, Swimming, GK quizzes
+
+
+\end{document}
